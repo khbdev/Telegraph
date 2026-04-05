@@ -2,7 +2,7 @@ package domain
 
 import (
 	"context"
-
+	"telegraph-clone/internal/models"
 )
 
 type DataRepository interface {
