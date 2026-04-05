@@ -27,5 +27,5 @@ func main(){
 
 	dataRepo := repository.NewDataRepository()
 
-	
+	_ = da
 }
