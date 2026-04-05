@@ -26,15 +26,12 @@ func (r *urlRepo) GetByTitle(ctx context.Context, title string) (*models.URL, er
 	var url models.URL
 
 	err := r.db.WithContext(ctx).
-		Preload("Data").                      // Data relation ni yuklash
-		Joins("Data").                        // GORM relation asosida join qilish
-		Where("data.title = ?", title).       // title bo‘yicha filter
+		Joins("JOIN data ON data.id = urls.data_id").
+		Where("data.title = ?", title).
+		Preload("Data").
 		First(&url).Error
 
 	if err != nil {
-		if er.Is(err, gorm.ErrRecordNotFound) {
-			return nil, nil
-		}
 		return nil, err
 	}
 

@@ -49,11 +49,7 @@ func main(){
 
 data, err := urlRepo.GetByTitle(ctx, "Salom-9800")
 
-jsonData, err := json.MarshalIndent(data, "", "  ")
-if err != nil {
-    log.Fatal(err)
-}
-fmt.Println(string(jsonData))
+
 
 
 
