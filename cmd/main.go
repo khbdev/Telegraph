@@ -33,7 +33,9 @@ func main(){
 
    _ = urlRepo
 
-   data := models.Da
+   data := models.Data{
+	Ti
+   }
 
    dataRepo.Create()
 }
