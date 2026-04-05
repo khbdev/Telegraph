@@ -38,7 +38,7 @@ func main(){
 
    _ = dataUsecase
 
-   ct
+   ctx, cancel := con
 
    data := dataUsecase.CreateData()
 
