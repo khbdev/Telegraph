@@ -4,7 +4,7 @@ import (
 	"context"
 	"telegraph-clone/internal/domain"
 	"telegraph-clone/internal/models"
-	"telegraph-clone//numbergeneration"
+
 )
 
 type DataUsecase struct {
@@ -47,7 +47,7 @@ func (uc *DataUsecase) CreateData(ctx context.Context, input CreateDataInput) (*
 	}
 
 	// 3️⃣ title ga random raqam qo'shish
-	randomTitle := numbergeneration.AddRandomNumberPrefix(input.Title)
+	randomTitle := .AddRandomNumberPrefix(input.Title)
 
 	// 4️⃣ URL model yaratish
 	url := &models.URL{
