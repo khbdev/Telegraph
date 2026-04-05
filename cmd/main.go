@@ -44,6 +44,8 @@ ctx, candel := context.WithTimeout(context.Background(), 3 * time.Second)
 defer candel()
 //    dataRepo.Create(ctx, &data)
 
-url := models.URL{}
+url := models.URL{
+	U
+}
 
 }
