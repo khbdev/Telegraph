@@ -45,7 +45,15 @@ func main(){
       ctx, cancel := context.WithTimeout(context.Background(), 3 * time.Second)
    defer cancel()
 
-data, err := urlRepo.GetByTitle(ctx, Salom-2065)
+data, err := urlRepo.GetByTitle(ctx, "Salom-2065")
+
+// jsonData, err := json.MarshalIndent(data, "", "  ")
+// if err != nil {
+//     log.Fatal(err)
+// }
+// fmt.Println(string(jsonData))
+
+
 
 //    dataUsecase := usecase.NewDataUsecase(dataRepo, urlRepo)
 
