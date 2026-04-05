@@ -1,3 +1,8 @@
+package numbergeneration
+
+import "gorm.io/gorm"
+
+
 func getMaxCounter(db *gorm.DB, base string) int {
     var lastSlug string
     db.Model(&models.Post{}).
