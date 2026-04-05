@@ -4,8 +4,11 @@ import (
 	// "context"
 	// "encoding/json"
 	// "fmt"
+	"context"
 	"log"
 	"telegraph-clone/internal/config"
+	"time"
+
 	// "telegraph-clone/internal/models"
 	// "telegraph-clone/internal/usecase"
 	// "time"
@@ -39,7 +42,7 @@ func main(){
 
    _ = urlRepo
 
-      ctx, cancel := co.WithTimeout(context.Background(), 3 * time.Second)
+      ctx, cancel := context.WithTimeout(context.Background(), 3 * time.Second)
    defer cancel()
 
 
