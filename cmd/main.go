@@ -5,6 +5,7 @@ import (
 	// "encoding/json"
 	// "fmt"
 	"context"
+	"encoding/json"
 	"log"
 	"telegraph-clone/internal/config"
 	"time"
@@ -47,11 +48,11 @@ func main(){
 
 data, err := urlRepo.GetByTitle(ctx, "Salom-2065")
 
-// jsonData, err := json.MarshalIndent(data, "", "  ")
-// if err != nil {
-//     log.Fatal(err)
-// }
-// fmt.Println(string(jsonData))
+jsonData, err := json.MarshalIndent(data, "", "  ")
+if err != nil {
+    log.Fatal(err)
+}
+fmt.Println(string(jsonData))
 
 
 
