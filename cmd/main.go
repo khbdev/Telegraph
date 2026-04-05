@@ -23,5 +23,5 @@ func main(){
 	}
 	_ = redis
 
-	data
+	dataRepo := repo
 }
