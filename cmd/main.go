@@ -63,10 +63,7 @@ if err != nil {
     log.Fatal(err)
 }
 fmt.Println(string(jsonData))
-data, err = urlRepo.GetByTitle(ctx, data.URL)
-if err != nil {
-	log.Fatal(err)
-}
+
 
 
 }
