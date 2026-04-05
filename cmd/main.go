@@ -39,8 +39,8 @@ func main(){
 
    _ = urlRepo
 
-   //    ctx, cancel := context.WithTimeout(context.Background(), 3 * time.Second)
-//    defer cancel()
+      ctx, cancel := co.WithTimeout(context.Background(), 3 * time.Second)
+   defer cancel()
 
 
 
