@@ -49,6 +49,6 @@ url := models.URL{
 	DataID: 1,
 }
 
-url.
+ur
 
 }
