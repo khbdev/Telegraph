@@ -1,6 +1,7 @@
 package main
 
 import (
+	"context"
 	"log"
 	"telegraph-clone/internal/config"
 	"telegraph-clone/internal/usecase"
@@ -38,7 +39,7 @@ func main(){
 
    _ = dataUsecase
 
-   ctx, cancel := con
+   ctx, cancel := context.WithTimeout(cont)
 
    data := dataUsecase.CreateData()
 
