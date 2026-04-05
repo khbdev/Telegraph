@@ -5,7 +5,7 @@ import (
 	// "encoding/json"
 	// "fmt"
 	"context"
-	"encoding/json"
+	// "encoding/json"
 	"fmt"
 	"log"
 	"telegraph-clone/internal/config"
@@ -49,7 +49,7 @@ func main(){
 
 data, err := urlRepo.GetByTitle(ctx, "Salom")
 
-fmt.Pri
+fmt.Println(data.Data)
 
 
 
