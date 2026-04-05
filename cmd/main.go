@@ -51,6 +51,6 @@ func main(){
    }
    data, err := dataUsecase.CreateData(ctx, req)
 if err != nil {
-	
+	log.Fatal()
 }
 }
