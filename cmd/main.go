@@ -38,6 +38,6 @@ func main(){
 	YourName: "Azizbek Xasanov",
 	YourStory: "Salom mening isimim Azizbek Xasanov",
    }
-
+c
    dataRepo.Create(data)
 }
