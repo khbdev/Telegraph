@@ -58,31 +58,6 @@ if err != nil {
 fmt.Println(string(jsonData))
 
 
-//    dataUsecase := usecase.NewDataUsecase(dataRepo, urlRepo)
-
-//    _ = dataUsecase
-
-//    ctx, cancel := context.WithTimeout(context.Background(), 3 * time.Second)
-//    defer cancel()
-
-//    req := models.CreateDataInput{
-// 	Title: "Salom",
-// 	YourName: "Azizbek Xasanov",
-// 	YourStory: "Salom Mening isimim Azizbek",
-//    }
-//    data, err := dataUsecase.CreateData(ctx, req)
-// if err != nil {
-// 	log.Fatal(err)
-// }
-
-
-
-// jsonData, err := json.MarshalIndent(data, "", "  ")
-// if err != nil {
-//     log.Fatal(err)
-// }
-// fmt.Println(string(jsonData))
-
 
 
 }
