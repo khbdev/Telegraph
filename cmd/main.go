@@ -55,6 +55,10 @@ if err != nil {
 	log.Fatal(err)
 }
 
-fmt.Println(data.URL)
+jsonData, err := json.MarshalIndent(data, "", "  ")
+if err != nil {
+    log.Fatal(err)
+}
+fmt.Println(string(jsonData))
 
 }
