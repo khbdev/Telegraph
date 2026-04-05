@@ -16,12 +16,12 @@ func NewDataRepository(db *gorm.DB) domain.DataRepository {
 	return &dataRepo{db: db}
 }
 
-
 func (r *dataRepo) Create(ctx context.Context, data *models.Data) (*models.Data, error) {
-	return r.db.WithContext(ctx).Create(data).Error
+	if err := r.db.WithContext(ctx).Create(data).Error; err != nil {
+		return nil, err
+	}
+	return data, nil
 }
-
-
 func (r *dataRepo) Update(ctx context.Context, data *models.Data) error {
 	return r.db.WithContext(ctx).Save(data).Error
 }
