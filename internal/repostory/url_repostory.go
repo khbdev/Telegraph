@@ -22,7 +22,6 @@ func (r *urlRepo) Create(ctx context.Context, url *models.URL) error {
 }
 
 
-func (r *urlRepo) GetByTitle(ctx context.Context, title string) (*models.URL, error) {
 func (r *urlRepo) GetByURL(ctx context.Context, urlStr string) (*models.URL, error) {
     var url models.URL
     err := r.db.WithContext(ctx).
