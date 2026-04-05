@@ -4,7 +4,7 @@ import (
 	"gorm.io/gorm"
 )
 
-type  struct {
+type Data struct {
 	gorm.Model
 	Title     string `gorm:"type:varchar(255);not null"`
 	YourName  string `gorm:"type:varchar(255);not null"`
