@@ -21,7 +21,7 @@ func (r *dataRepo) Create(ctx context.Context, data *models.Data) error {
 	return r.db.WithContext(ctx).Create(data).Error
 }
 
-// UPDATE
+
 func (r *dataRepo) Update(ctx context.Context, data *models.Data) error {
 	return r.db.WithContext(ctx).Save(data).Error
 }
