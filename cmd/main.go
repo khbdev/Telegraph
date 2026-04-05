@@ -38,6 +38,6 @@ func main(){
 
    _ = dataUsecase
 
-   data := 
+   data := dataUsecase.CreateData("")
 
 }
