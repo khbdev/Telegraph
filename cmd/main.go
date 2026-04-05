@@ -34,6 +34,7 @@ func main(){
 
    _ = urlRepo
 
-   dataUsecase := usecase.NewDataUsecase(da)
+   dataUsecase := usecase.NewDataUsecase(dataRepo, urlRepo)
+   
 
 }
