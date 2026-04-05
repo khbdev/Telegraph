@@ -1,7 +1,9 @@
 package models
 
+import "gorm.io/gorm"
 
-type Data struct {
+
+type URL struct {
 	gorm.Model
 	Title     string `gorm:"type:varchar(255);not null"`
 	YourName  string `gorm:"type:varchar(255);not null"`
