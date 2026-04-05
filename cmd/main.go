@@ -55,5 +55,5 @@ if err != nil {
 	log.Fatal(err)
 }
 
-fmt.Println(data)
+fmt.Println(data.)
 }
