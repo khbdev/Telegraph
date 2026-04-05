@@ -1,6 +1,7 @@
 package main
 
 import (
+	"context"
 	"log"
 	"telegraph-clone/internal/config"
 	"telegraph-clone/internal/models"
@@ -38,6 +39,6 @@ func main(){
 	YourName: "Azizbek Xasanov",
 	YourStory: "Salom mening isimim Azizbek Xasanov",
    }
-ctx, candel := 
+ctx, candel := context.
    dataRepo.Create(data)
 }
