@@ -21,7 +21,7 @@ func (r *urlRepo) Create(ctx context.Context, url *models.URL) error {
 	return r.db.WithContext(ctx).Create(url).Error
 }
 
-// GET BY TITLE (Data.Title orqali)
+
 func (r *urlRepo) GetByTitle(ctx context.Context, title string) (*models.URL, error) {
 	var url models.URL
 
