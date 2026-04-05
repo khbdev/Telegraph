@@ -28,7 +28,7 @@ type CreateDataOutput struct {
 }
 
 // CreateData usecase
-func (uc *DataUsecase) CreateData(ctx context.Context, input mod) (*CreateDataOutput, error) {
+func (uc *DataUsecase) CreateData(ctx context.Context, input models.CreateDataInput) (*CreateDataOutput, error) {
 
 	data := &models.Data{
 		Title:     input.Title,
