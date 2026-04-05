@@ -45,7 +45,7 @@ defer candel()
 //    dataRepo.Create(ctx, &data)
 
 url := models.URL{
-	U
+	URL: "Salom",
 }
 
 }
