@@ -47,7 +47,7 @@ func main(){
       ctx, cancel := context.WithTimeout(context.Background(), 3 * time.Second)
    defer cancel()
 
-data, err := urlRepo.GetByTitle(ctx, "Salom")
+data, err := urlRepo.GetByTitle(ctx, "Salom-")
 
 fmt.Println(data.Data)
 
