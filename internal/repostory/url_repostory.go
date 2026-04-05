@@ -27,7 +27,7 @@ func (r *urlRepo) GetByTitle(ctx context.Context, title string) (*models.URL, er
 
 	err := r.db.WithContext(ctx).
 		Joins("JOIN data ON data.id = urls.data_id").
-		Where("data.title = ?", title).
+		Where("data.url = ?", title).
 		Preload("Data").
 		First(&url).Error
 
