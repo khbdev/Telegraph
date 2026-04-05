@@ -46,7 +46,9 @@ defer candel()
 
 url := models.URL{
 	URL: "Salom",
-	DataID: ,
+	DataID: 1,
 }
+
+
 
 }
