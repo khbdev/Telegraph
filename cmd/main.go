@@ -2,12 +2,11 @@ package main
 
 import (
 	"context"
-	"fmt"
+
 	"log"
 	"telegraph-clone/internal/config"
-	"telegraph-clone/internal/models"
+
 	repository "telegraph-clone/internal/repostory"
-	"time"
 
 	loadenv "telegraph-clone/pkg/loadEnv"
 )
