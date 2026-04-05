@@ -4,6 +4,7 @@ import (
 	"context"
 	"log"
 	"telegraph-clone/internal/config"
+	"telegraph-clone/internal/models"
 	"telegraph-clone/internal/usecase"
 	"time"
 
@@ -43,7 +44,7 @@ func main(){
    ctx, cancel := context.WithTimeout(context.Background(), 3 * time.Second)
    defer cancel()
 
-   
+   req := models.Cre
    data := dataUsecase.CreateData()
 
 }
