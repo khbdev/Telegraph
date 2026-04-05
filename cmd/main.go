@@ -22,4 +22,6 @@ func main(){
 		log.Fatal(err)
 	}
 	_ = redis
+
+	
 }
