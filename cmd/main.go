@@ -39,6 +39,9 @@ func main(){
 
    _ = urlRepo
 
+   cannot use urlRepo.GetByTitle(ctx, data.URL) (value of type *models.URL) as *usecase.CreateDataOutput value in assignmentcompilerIncompatibleAssign
+var urlRepo domain.URLRepository
+
    dataUsecase := usecase.NewDataUsecase(dataRepo, urlRepo)
 
    _ = dataUsecase
