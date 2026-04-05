@@ -1,10 +1,9 @@
 package main
 
 import (
-
-
 	"log"
 	"telegraph-clone/internal/config"
+	"telegraph-clone/internal/usecase"
 
 	repository "telegraph-clone/internal/repostory"
 
@@ -35,6 +34,6 @@ func main(){
 
    _ = urlRepo
 
-   dataUsecase := 
+   dataUsecase := usecase
 
 }
