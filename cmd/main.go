@@ -51,6 +51,6 @@ url := models.URL{
 
 urlRepo.Create(ctx, &url)
 
-get := urlRepo.GetByTitle(ctx, ur)
+get, derr := urlRepo.GetByTitle(ctx, url.URL)
 
 }
