@@ -39,6 +39,6 @@ func main(){
 	YourName: "Azizbek Xasanov",
 	YourStory: "Salom mening isimim Azizbek Xasanov",
    }
-ctx, candel := context.WithTimeout()
+ctx, candel := context.WithTimeout(context.Background(), )
    dataRepo.Create(data)
 }
