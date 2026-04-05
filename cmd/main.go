@@ -39,9 +39,10 @@ func main(){
 
    _ = urlRepo
 
-   
+   //    ctx, cancel := context.WithTimeout(context.Background(), 3 * time.Second)
+//    defer cancel()
 
-   
+
 
 //    dataUsecase := usecase.NewDataUsecase(dataRepo, urlRepo)
 
