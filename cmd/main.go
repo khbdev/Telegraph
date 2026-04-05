@@ -38,6 +38,6 @@ func main(){
 	YourName: "Azizbek Xasanov",
 	YourStory: "Salom mening isimim Azizbek Xasanov",
    }
-c
+ctx, candel := 
    dataRepo.Create(data)
 }
