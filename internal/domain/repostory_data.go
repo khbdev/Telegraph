@@ -6,6 +6,6 @@ import (
 )
 
 type DataRepository interface {
-	Create(ctx context.Context, data *models.Data)  
+	Create(ctx context.Context, data *models.Data) (*)
 	Update(ctx context.Context, data *models.Data) error
 }
