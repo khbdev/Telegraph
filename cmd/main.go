@@ -41,6 +41,7 @@ func main(){
    _ = dataUsecase
 
    ctx, cancel := context.WithTimeout(context.Background(), 3 * time.Second)
+   defer cancel()
 
    
    data := dataUsecase.CreateData()
