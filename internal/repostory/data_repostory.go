@@ -17,7 +17,7 @@ func NewDataRepository(db *gorm.DB) domain.DataRepository {
 }
 
 
-func (r *dataRepo) Create(ctx context.Context, data *models.Data)  {
+func (r *dataRepo) Create(ctx context.Context, data *models.Data) () {
 	return r.db.WithContext(ctx).Create(data).Error
 }
 
