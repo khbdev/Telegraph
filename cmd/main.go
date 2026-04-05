@@ -32,5 +32,7 @@ func main(){
 
    _ = urlRepo
 
-   dataRepo.
+
+   
+   dataRepo.Create()
 }
