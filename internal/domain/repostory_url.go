@@ -1,7 +1,10 @@
 package domain
 
-import "context"
+import (
+	"context"
+	"telegraph-clone/internal/domain"
+)
 
 type URLRepository interface {
-	Create(ctx context.Context, url *) (*URL, error)
+	Create(ctx context.Context, url *domain.URL) (*URL, error)
 }
