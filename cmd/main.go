@@ -49,6 +49,8 @@ func main(){
 	YourName: "Azizbek Xasanov",
 	YourStory: "Salom Mening isimim Azizbek",
    }
-   data  := dataUsecase.CreateData(ctx, req)
-
+   data, err := dataUsecase.CreateData(ctx, req)
+if err != nil {
+	
+}
 }
