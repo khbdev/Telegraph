@@ -5,6 +5,7 @@ import (
 	"log"
 	"telegraph-clone/internal/config"
 	"telegraph-clone/internal/usecase"
+	"time"
 
 	repository "telegraph-clone/internal/repostory"
 
@@ -39,8 +40,9 @@ func main(){
 
    _ = dataUsecase
 
-   ctx, cancel := context.WithTimeout(cont)
+   ctx, cancel := context.WithTimeout(context.Background(), 3 * time.Second)
 
+   
    data := dataUsecase.CreateData()
 
 }
