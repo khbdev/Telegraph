@@ -3,7 +3,7 @@ package main
 import (
 	"log"
 	"telegraph-clone/internal/config"
-	repository "telegraph-clone/internal/repostory"
+	
 	loadenv "telegraph-clone/pkg/loadEnv"
 )
 
