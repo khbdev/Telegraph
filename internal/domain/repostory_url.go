@@ -6,5 +6,5 @@ import (
 )
 
 type URLRepository interface {
-	Create(ctx context.Context, url *models.) (*URL, error)
+	Create(ctx context.Context, url *models.URL) (*mod, error)
 }
