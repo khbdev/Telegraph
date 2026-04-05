@@ -26,7 +26,7 @@ func main(){
 	_ = redis
 
 	dataRepo := repository.NewDataRepository(db)
-	urlRepo := repository.NewURLRepository()
+	urlRepo := repository.NewURLRepository(d)
 
 	_ = dataRepo
 }
