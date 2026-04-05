@@ -33,20 +33,20 @@ type CreateDataOutput struct {
 
 // CreateData usecase
 func (uc *DataUsecase) CreateData(ctx context.Context, input CreateDataInput) (*CreateDataOutput, error) {
-\
+
 	data := &models.Data{
 		Title:     input.Title,
 		YourName:  input.YourName,
 		YourStory: input.YourStory,
 	}
 
-	// 2️⃣ DataRepository.Create chaqirish
+	
 	createdData, err := uc.dataRepo.Create(ctx, data)
 	if err != nil {
 		return nil, err
 	}
 
-	// 3️⃣ title ga random raqam qo'shish
+
 	randomTitle := numbergeneration.AddRandomNumberPrefix(input.Title)
 
 	// 4️⃣ URL model yaratish
