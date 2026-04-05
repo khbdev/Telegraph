@@ -3,6 +3,7 @@ package main
 import (
 	"log"
 	"telegraph-clone/internal/config"
+	"telegraph-clone/internal/models"
 	repository "telegraph-clone/internal/repostory"
 
 	loadenv "telegraph-clone/pkg/loadEnv"
@@ -32,7 +33,7 @@ func main(){
 
    _ = urlRepo
 
-   data := 
+   data := models.Da
 
    dataRepo.Create()
 }
