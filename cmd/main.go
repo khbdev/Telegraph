@@ -49,6 +49,8 @@ url := models.URL{
 	DataID: 1,
 }
 
-urlRepo.Create(ctx, )
+urlRepo.Create(ctx, &url)
+
+
 
 }
