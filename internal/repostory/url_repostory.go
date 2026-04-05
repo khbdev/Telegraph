@@ -23,17 +23,17 @@ func (r *urlRepo) Create(ctx context.Context, url *models.URL) error {
 
 
 func (r *urlRepo) GetByTitle(ctx context.Context, title string) (*models.URL, error) {
-	var url models.URL
+    var url models.URL
 
-	err := r.db.WithContext(ctx).
-		Joins("JOIN data ON data.id = urls.data_id").
-		Where("data.url = ?", title).
-		Preload("Data").
-		First(&url).Error
+    err := r.db.WithContext(ctx).
+        Joins("JOIN data ON data.id = urls.data_id"). // data bilan join
+        Where("urls.url = ?", title).                // URL ustuniga filter
+        Preload("Data").                             // Data ob'ektini yuklash
+        First(&url).Error
 
-	if err != nil {
-		return nil, err
-	}
+    if err != nil {
+        return nil, err
+    }
 
-	return &url, nil
+    return &url, nil
 }
