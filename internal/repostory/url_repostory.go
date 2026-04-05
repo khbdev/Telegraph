@@ -22,14 +22,18 @@ func (r *urlRepo) Create(ctx context.Context, url *models.URL) error {
 }
 
 
-func (r *urlRepo) GetByURL(ctx context.Context, urlStr string) (*models.URL, error) {
-    var url models.URL
-    err := r.db.WithContext(ctx).
-        Preload("Data").              // Data ob'ektini yuklash
-        Where("url = ?", urlStr).     // URL bo‘yicha qidiruv
-        First(&url).Error
-    if err != nil {
-        return nil, err
-    }
-    return &url, nil
+func (r *urlRepo) GetByTitle(ctx context.Context, title string) (*models.URL, error) {
+	var url models.URL
+
+	err := r.db.WithContext(ctx).
+		Joins("JOIN data ON data.id = urls.data_id").
+		Where("data.title = ?", title).
+		Preload("Data").
+		First(&url).Error
+
+	if err != nil {
+		return nil, err
+	}
+
+	return &url, nil
 }
