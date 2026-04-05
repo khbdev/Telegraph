@@ -56,5 +56,5 @@ if err != nil {
 }
 
 fmt.Println(data.URL)
-fmt.Println(data.Data.Model)
+
 }
