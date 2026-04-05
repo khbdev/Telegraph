@@ -2,6 +2,7 @@ package main
 
 import (
 	"context"
+	"fmt"
 	"log"
 	"telegraph-clone/internal/config"
 	"telegraph-clone/internal/models"
@@ -54,5 +55,5 @@ if err != nil {
 	log.Fatal(err)
 }
 
-fmt.Pri
+fmt.Println(data)
 }
