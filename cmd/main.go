@@ -58,6 +58,6 @@ if err != nil {
 }
 fmt.Println(get.URL)
 fmt.Println(get.DataID)
-fmt.Println(get.DataID)
+fmt.Println(get.Data)
 
 }
