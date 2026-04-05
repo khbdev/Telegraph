@@ -2,7 +2,7 @@ package domain
 
 import (
 	"context"
-	"your_project/internal/models"
+
 )
 
 type DataRepository interface {
