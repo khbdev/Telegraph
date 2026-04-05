@@ -24,7 +24,7 @@ func NewDataUsecase(dataRepo domain.DataRepository, urlRepo domain.URLRepository
 
 type CreateDataOutput struct {
 	Data *models.Data
-	URL  *model
+	URL  string
 }
 
 // CreateData usecase
