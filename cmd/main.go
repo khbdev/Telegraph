@@ -54,7 +54,5 @@ if err != nil {
 	log.Fatal(err)
 }
 
-for  v := range data {
-	
-}
+fmt.Pri
 }
