@@ -41,6 +41,6 @@ func main(){
 	YourStory: "Salom mening isimim Azizbek Xasanov",
    }
 ctx, candel := context.WithTimeout(context.Background(), 3 * time.Second)
-
+defer candel()
    dataRepo.Create(ctx, data)
 }
