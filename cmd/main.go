@@ -35,11 +35,11 @@ func main(){
 
    _ = urlRepo
 
-   data := models.Data{
-	Title: "Salom",
-	YourName: "Azizbek Xasanov",
-	YourStory: "Salom mening isimim Azizbek Xasanov",
-   }
+//    data := models.Data{
+// 	Title: "Salom",
+// 	YourName: "Azizbek Xasanov",
+// 	YourStory: "Salom mening isimim Azizbek Xasanov",
+//    }
 ctx, candel := context.WithTimeout(context.Background(), 3 * time.Second)
 defer candel()
 //    dataRepo.Create(ctx, &data)
