@@ -39,5 +39,5 @@ func main(){
 	YourStory: "Salom mening isimim Azizbek Xasanov",
    }
 
-   dataRepo.Create()
+   dataRepo.Create(data)
 }
