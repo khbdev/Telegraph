@@ -44,7 +44,9 @@ func main(){
    ctx, cancel := context.WithTimeout(context.Background(), 3 * time.Second)
    defer cancel()
 
-   req := models.Cre
+   req := models.CreateDataInput{
+	Title: "Salom",
+   }
    data := dataUsecase.CreateData()
 
 }
