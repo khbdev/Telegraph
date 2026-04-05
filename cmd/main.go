@@ -55,5 +55,6 @@ if err != nil {
 	log.Fatal(err)
 }
 
-fmt.Println(data.)
+fmt.Println(data.URL)
+fmt.Println(data.URL)
 }
