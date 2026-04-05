@@ -20,11 +20,7 @@ func NewDataUsecase(dataRepo domain.DataRepository, urlRepo domain.URLRepository
 }
 
 // Input va Output struct handler bilan ishlash uchun
-type CreateDataInput struct {
-	Title     string
-	YourName  string
-	YourStory string
-}
+
 
 type CreateDataOutput struct {
 	Data *models.Data
@@ -32,7 +28,7 @@ type CreateDataOutput struct {
 }
 
 // CreateData usecase
-func (uc *DataUsecase) CreateData(ctx context.Context, input CreateDataInput) (*CreateDataOutput, error) {
+func (uc *DataUsecase) CreateData(ctx context.Context, input mod) (*CreateDataOutput, error) {
 
 	data := &models.Data{
 		Title:     input.Title,
