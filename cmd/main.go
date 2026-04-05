@@ -56,6 +56,7 @@ get, err := urlRepo.GetByTitle(ctx, url.URL)
 if err != nil {
 	log.Fatal(err)
 }
-fmt.Println(get.Ur)
+fmt.Println(get.URL)
+fmt.Println(get.URL)
 
 }
