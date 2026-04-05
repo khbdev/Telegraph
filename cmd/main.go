@@ -62,6 +62,6 @@ if err != nil {
 }
 fmt.Println(string(jsonData))
 
-data, err := urlRepo.GetByTitle()
+data, err := urlRepo.GetByTitle(ctx)
 
 }
