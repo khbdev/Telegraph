@@ -54,7 +54,7 @@ if err != nil {
 	log.Fatal(err)
 }
 
-for _, v := range time.DateOnly {
+for  v := range data {
 	
 }
 }
