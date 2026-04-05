@@ -45,7 +45,7 @@ func main(){
       ctx, cancel := context.WithTimeout(context.Background(), 3 * time.Second)
    defer cancel()
 
-data, err := urlRepo.GetByTitle(ctx, )
+data, err := urlRepo.GetByTitle(ctx, Salom-2065)
 
 //    dataUsecase := usecase.NewDataUsecase(dataRepo, urlRepo)
 
