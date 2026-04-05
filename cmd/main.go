@@ -24,5 +24,5 @@ func main(){
 	}
 	_ = redis
 
-	dataRepo := repository.NewDataRepository()
+	dataRepo := repo.NewDataRepository()
 }
