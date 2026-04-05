@@ -36,6 +36,7 @@ func main(){
    data := models.Data{
 	Title: "Salom",
 	YourName: "Azizbek Xasanov",
+	Ur
    }
 
    dataRepo.Create()
