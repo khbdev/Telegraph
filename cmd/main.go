@@ -6,6 +6,7 @@ import (
 	"telegraph-clone/internal/config"
 	"telegraph-clone/internal/models"
 	repository "telegraph-clone/internal/repostory"
+	"time"
 
 	loadenv "telegraph-clone/pkg/loadEnv"
 )
@@ -39,6 +40,6 @@ func main(){
 	YourName: "Azizbek Xasanov",
 	YourStory: "Salom mening isimim Azizbek Xasanov",
    }
-ctx, candel := context.WithTimeout(context.Background(), )
+ctx, candel := context.WithTimeout(context.Background(), 3 * time.Second)
    dataRepo.Create(data)
 }
