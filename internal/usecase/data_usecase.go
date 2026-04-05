@@ -49,18 +49,18 @@ func (uc *DataUsecase) CreateData(ctx context.Context, input CreateDataInput) (*
 
 	randomTitle := numbergeneration.AddRandomNumberPrefix(input.Title)
 
-	// 4️⃣ URL model yaratish
+
 	url := &models.URL{
 		URL:    randomTitle,
 		DataID: createdData.ID,
 	}
 
-	// 5️⃣ URLRepository.Create chaqirish
+
 	if err := uc.urlRepo.Create(ctx, url); err != nil {
 		return nil, err
 	}
 
-	// 6️⃣ Natijani qaytarish
+
 	return &CreateDataOutput{
 		Data: createdData,
 		URL:  url,
