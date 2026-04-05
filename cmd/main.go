@@ -45,19 +45,7 @@ func main(){
 
    _ = urlRepo
 
-      ctx, cancel := context.WithTimeout(context.Background(), 3 * time.Second)
-   defer cancel()
-
-data, err := urlRepo.GetByTitle(ctx, "Salom-9800")
-
-
-jsonData, err := json.MarshalIndent(data, "", "  ")
-if err != nil {
-    log.Fatal(err)
-}
-fmt.Println(string(jsonData))
-
-
+ 
 
 
 }
