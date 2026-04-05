@@ -5,7 +5,7 @@ import "gorm.io/gorm"
 
 
 func GenerateSlug(db *gorm.DB, title string) (string, error) {
-    base := normalize(title) // Salom → salom
+    base := norm(title) // Salom → salom
     slug := base
 
     // Hash index orqali tekshiruv
