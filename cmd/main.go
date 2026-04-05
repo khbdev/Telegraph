@@ -47,6 +47,7 @@ func main(){
    req := models.CreateDataInput{
 	Title: "Salom",
 	YourName: "Azizbek Xasanov",
+	YourStory: "Salom Mening isimim Azizbek",
    }
    data := dataUsecase.CreateData()
 
