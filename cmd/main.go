@@ -36,28 +36,5 @@ func main(){
 
    _ = urlRepo
 
-//    data := models.Data{
-// 	Title: "Salom",
-// 	YourName: "Azizbek Xasanov",
-// 	YourStory: "Salom mening isimim Azizbek Xasanov",
-//    }
-ctx, candel := context.WithTimeout(context.Background(), 3 * time.Second)
-defer candel()
-//    dataRepo.Create(ctx, &data)
-
-url := models.URL{
-	URL: "Salom",
-	DataID: 1,
-}
-
-urlRepo.Create(ctx, &url)
-
-get, err := urlRepo.GetByTitle(ctx, url.URL)
-if err != nil {
-	log.Fatal(err)
-}
-fmt.Println(get.URL)
-fmt.Println(get.DataID)
-fmt.Println(get.Data)
 
 }
