@@ -32,7 +32,7 @@ func (r *urlRepo) GetByTitle(ctx context.Context, title string) (*models.URL, er
 		First(&url).Error
 
 	if err != nil {
-		if errors.Is(err, gorm.ErrRecordNotFound) {
+		if er.Is(err, gorm.ErrRecordNotFound) {
 			return nil, nil
 		}
 		return nil, err
