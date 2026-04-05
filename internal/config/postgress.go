@@ -1,9 +1,10 @@
 package config
 
 import (
-	"context"
 	"fmt"
 	"log"
+	"telegraph-clone/internal/models"
+
 	"os"
 	"time"
 
@@ -12,43 +13,48 @@ import (
 	"gorm.io/gorm/logger"
 )
 
-func ConnectDB() *gorm.DB {
+func NewPostgresDB() (*gorm.DB, error) {
+	host := os.Getenv("DB_HOST")
+	port := os.Getenv("DB_PORT")
+	user := os.Getenv("DB_USER")
+	password := os.Getenv("DB_PASSWORD")
+	dbname := os.Getenv("DB_NAME")
+	sslmode := os.Getenv("DB_SSLMODE")
+
+	if host == "" || port == "" || user == "" || dbname == "" {
+		return nil, fmt.Errorf("database environment variables not set properly")
+	}
+
 	dsn := fmt.Sprintf(
-		"host=%s port=%s user=%s password=%s dbname=%s sslmode=%s",
-		os.Getenv("DB_HOST"),
-		os.Getenv("DB_PORT"),
-		os.Getenv("DB_USER"),
-		os.Getenv("DB_PASSWORD"),
-		os.Getenv("DB_NAME"),
-		os.Getenv("DB_SSLMODE"),
+		"host=%s port=%s user=%s password=%s dbname=%s sslmode=%s TimeZone=UTC",
+		host, port, user, password, dbname, sslmode,
 	)
 
-	
-	ctx, cancel := context.WithTimeout(context.Background(), 10*time.Second)
-	defer cancel()
-
 	db, err := gorm.Open(postgres.Open(dsn), &gorm.Config{
-		Logger: logger.Default.LogMode(logger.Info),
+		Logger: logger.Default.LogMode(logger.Warn), 
 	})
 	if err != nil {
-		log.Fatalf("Failed to connect to database: %v", err)
+		return nil, err
 	}
 
 	
 	sqlDB, err := db.DB()
 	if err != nil {
-		log.Fatalf("Failed to get sql.DB from gorm.DB: %v", err)
+		return nil, err
 	}
 
-
-	if err := sqlDB.PingContext(ctx); err != nil {
-		log.Fatalf("Database ping failed or timeout: %v", err)
-	}
-
+	sqlDB.SetMaxOpenConns(25)
 	sqlDB.SetMaxIdleConns(10)
-	sqlDB.SetMaxOpenConns(100)
-	sqlDB.SetConnMaxLifetime(30 * time.Minute)
+	sqlDB.SetConnMaxLifetime(time.Hour)
 
-	fmt.Println("PostgreSQL connected")
-	return db
+	
+	if err := db.AutoMigrate(
+		&models.Hop{},
+	); err != nil {
+		return nil, err
+	}
+
+	log.Println("PostgreSQL connected (GORM) & AutoMigrate done")
+
+	return db, nil
 }

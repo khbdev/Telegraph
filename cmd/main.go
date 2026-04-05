@@ -11,7 +11,10 @@ func main(){
 
 	loadenv.Load()
 
-	db := config.ConnectDB()
+	db, err := config.NewPostgresDB()
+	if err != nil {
+		log.Fatal(err)
+	}
 	_ = db
 
 	redis, err := config.NewRedisClient()
