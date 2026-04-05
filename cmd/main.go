@@ -2,6 +2,7 @@ package main
 
 import (
 	"context"
+	"fmt"
 	"log"
 	"telegraph-clone/internal/config"
 	"telegraph-clone/internal/models"
@@ -55,6 +56,6 @@ get, err := urlRepo.GetByTitle(ctx, url.URL)
 if err != nil {
 	log.Fatal(err)
 }
-
+fmt.Println()
 
 }
