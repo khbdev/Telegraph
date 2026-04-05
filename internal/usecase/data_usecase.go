@@ -4,7 +4,7 @@ import (
 	"context"
 	"telegraph-clone/internal/domain"
 	"telegraph-clone/internal/models"
-	"telegraph-clone/internal/numbergeneration"
+	"telegraph-clone//numbergeneration"
 )
 
 type DataUsecase struct {
