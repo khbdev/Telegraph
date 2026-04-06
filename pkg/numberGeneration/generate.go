@@ -17,7 +17,7 @@ func AddRandomNumberPrefix(title string) string {
 	// 2. bo‘sh joylarni "-" ga almashtirish
 	slug = strings.ReplaceAll(slug, " ", "-")
 
-	// 3. random number
+
 	num := rand.Intn(9000) + 1000
 
 	return fmt.Sprintf("%s-%d", slug, num)
