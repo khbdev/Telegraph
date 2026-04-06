@@ -49,6 +49,9 @@ go func() {
   dataHandler := handler.NewDataHandler(dataUsecase)
 
 
-  r = gin.Default()
+  r := gin.Default()
+
+
+
 
 }
