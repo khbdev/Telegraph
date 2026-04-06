@@ -45,10 +45,12 @@ go func() {
 
 
   dataUsecase := usecase.NewDataUsecase(dataRepo, urlRepo)
-  
+    r := gin.Default()
 
   dataHandler := handler.NewDataHandler(dataUsecase)
 
+
+  r.POST()
 
 
 
