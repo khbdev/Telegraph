@@ -11,6 +11,8 @@ import (
 	repository "telegraph-clone/internal/repostory"
 
 	loadenv "telegraph-clone/pkg/loadEnv"
+
+	"github.com/gin-gonic/gin"
 )
 
 
@@ -47,6 +49,6 @@ go func() {
   dataHandler := handler.NewDataHandler(dataUsecase)
 
 
-  r 
+  r = gin.Default()
 
 }
