@@ -59,6 +59,6 @@ func (uc *DataUsecase) CreateData(ctx context.Context, input models.CreateDataIn
 
 	return &CreateDataOutput{
 		URL:  url.URL,
-		Data: ,
+		Data: createdData,
 	}, nil
 }
