@@ -40,7 +40,7 @@ func (h *DataHandler) CreateData(c *gin.Context) {
 	}
 
 	// 3. response qaytaramiz
-	JSONSuccess(c, http.StatusCreated, gin.H{
+	(c, http.StatusCreated, gin.H{
 		"url":  result.URL,
 		"data": result.Data,
 	})
