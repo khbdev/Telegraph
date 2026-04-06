@@ -17,3 +17,4 @@ func NewDataHandler(uc *usecase.DataUsecase) *DataHandler {
 		uc: uc,
 	}
 }
+
