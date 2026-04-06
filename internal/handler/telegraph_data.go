@@ -25,7 +25,7 @@ func (h *DataHandler) CreateData(c *gin.Context) {
 
 	// 1. JSON parse
 	if err := c.ShouldBindJSON(&input); err != nil {
-		JSONError(c, http.StatusBadRequest, "invalid request body")
+		(c, http.StatusBadRequest, "invalid request body")
 		return
 	}
 
