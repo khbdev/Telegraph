@@ -27,7 +27,7 @@ func (h *DataHandler) CreateData(c *gin.Context) {
 
 	// 1. JSON parse
 	if err := c.ShouldBindJSON(&input); err != nil {
-		(c, http.StatusBadRequest, "invalid request body")
+		response.JSONError(c, http.StatusBadRequest, "invalid request body")
 		return
 	}
 
@@ -35,7 +35,7 @@ func (h *DataHandler) CreateData(c *gin.Context) {
 	result, err := h.uc.CreateData(c.Request.Context(), input)
 	if err != nil {
 		// ❗ tizim xatoni chiqarmaymiz
-		JSONError(c, http.StatusInternalServerError, "something went wrong")
+		response.JSONError(c, http.StatusInternalServerError, "something went wrong")
 		return
 	}
 
