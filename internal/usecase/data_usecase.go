@@ -21,7 +21,6 @@ func NewDataUsecase(dataRepo domain.DataRepository, urlRepo domain.URLRepository
 
 // Input va Output struct handler bilan ishlash uchun
 
-
 type CreateDataOutput struct {
 	URL  string
 }
