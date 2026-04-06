@@ -31,16 +31,14 @@ func (h *DataHandler) CreateData(c *gin.Context) {
 		return
 	}
 
-	// 2. usecase chaqiramiz
 	result, err := h.uc.CreateData(c.Request.Context(), input)
 	if err != nil {
-		// ❗ tizim xatoni chiqarmaymiz
 		response.JSONError(c, http.StatusInternalServerError, "something went wrong")
 		return
 	}
 
-	// 3. response qaytaramiz
-	(c, http.StatusCreated, gin.H{
+
+	response.JSONSuccess(c, http.StatusCreated, gin.H{
 		"url":  result.URL,
 		"data": result.Data,
 	})
