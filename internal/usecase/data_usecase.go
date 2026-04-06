@@ -24,6 +24,7 @@ func NewDataUsecase(dataRepo domain.DataRepository, urlRepo domain.URLRepository
 
 type CreateDataOutput struct {
 	URL  string
+	
 }
 
 
