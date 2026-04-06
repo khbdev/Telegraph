@@ -44,6 +44,6 @@ go func() {
 
   dataUsecase := usecase.NewDataUsecase(dataRepo, urlRepo)
 
-  dataHandler := handler.
+  dataHandler := handler.NewDataHandler(da)
 
 }
