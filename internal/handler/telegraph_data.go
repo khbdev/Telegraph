@@ -3,9 +3,11 @@ package handler
 import (
 	"net/http"
 
-	"github.com/gin-gonic/gin"
 	"telegraph-clone/internal/models"
 	"telegraph-clone/internal/usecase"
+	"telegraph-clone/pkg/response"
+
+	"github.com/gin-gonic/gin"
 )
 
 type DataHandler struct {
@@ -25,7 +27,7 @@ func (h *DataHandler) CreateData(c *gin.Context) {
 
 	// 1. JSON parse
 	if err := c.ShouldBindJSON(&input); err != nil {
-		(c, http.StatusBadRequest, "invalid request body")
+		response.JSONError()(c, http.StatusBadRequest, "invalid request body")
 		return
 	}
 
