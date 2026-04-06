@@ -19,13 +19,14 @@ func NewDataUsecase(dataRepo domain.DataRepository, urlRepo domain.URLRepository
 	}
 }
 
-// Input va Output struct handler bilan ishlash uchun
+
+
 
 type CreateDataOutput struct {
 	URL  string
 }
 
-// CreateData usecase
+
 func (uc *DataUsecase) CreateData(ctx context.Context, input models.CreateDataInput) (*CreateDataOutput, error) {
 
 	data := &models.Data{
