@@ -39,11 +39,6 @@ go func() {
 	dataRepo := repository.NewDataRepository(db)
 	urlRepo := repository.NewURLRepository(db)
 
-	_ = dataRepo
-
-   _ = urlRepo
-
-
   dataUsecase := usecase.NewDataUsecase(dataRepo, urlRepo)
     r := gin.Default()
 
