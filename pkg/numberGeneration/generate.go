@@ -20,5 +20,5 @@ func AddRandomNumberPrefix(title string) string {
 	// 3. random number
 	num := rand.Intn(9000) + 1000
 
-	return fmt.Sprintf("/%s-%d", slug, num)
+	return fmt.Sprintf("%s-%d", slug, num)
 }
