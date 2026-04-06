@@ -8,8 +8,9 @@ import (
 	// "encoding/json"
 
 	"log"
+	"net/http"
+	_ "net/http/pprof"
 	"telegraph-clone/internal/config"
-	
 
 	// "telegraph-clone/internal/models"
 	// "telegraph-clone/internal/usecase"
@@ -22,6 +23,10 @@ import (
 
 
 func main(){
+
+go func() {
+    http.ListenAndServe("localhost:6060", nil)
+}()
 
 	loadenv.Load()
 
@@ -44,7 +49,4 @@ func main(){
 
    _ = urlRepo
 
- 
 
-
-}
