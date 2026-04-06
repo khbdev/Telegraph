@@ -5,6 +5,7 @@ import (
 	"net/http"
 	_ "net/http/pprof"
 	"telegraph-clone/internal/config"
+	"telegraph-clone/internal/handler"
 	"telegraph-clone/internal/usecase"
 
 	repository "telegraph-clone/internal/repostory"
@@ -43,6 +44,6 @@ go func() {
 
   dataUsecase := usecase.NewDataUsecase(dataRepo, urlRepo)
 
-  dataHandler
+  dataHandler := handler.
 
 }
