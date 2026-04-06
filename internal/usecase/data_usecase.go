@@ -24,7 +24,7 @@ func NewDataUsecase(dataRepo domain.DataRepository, urlRepo domain.URLRepository
 
 type CreateDataOutput struct {
 	URL  string
-	Data *
+	Data *models.Data
 }
 
 
@@ -59,5 +59,6 @@ func (uc *DataUsecase) CreateData(ctx context.Context, input models.CreateDataIn
 
 	return &CreateDataOutput{
 		URL:  url.URL,
+		Data: ,
 	}, nil
 }
