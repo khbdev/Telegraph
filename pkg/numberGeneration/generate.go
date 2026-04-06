@@ -3,6 +3,7 @@ package numbergeneration
 import (
 	"fmt"
 	"math/rand"
+	"strings"
 	"time"
 )
 
