@@ -48,5 +48,5 @@ go func() {
   r.POST("/data", dataHandler.CreateData)
 
 
-  r.Run(":8085" )
+  r.Run(":8085")
 }
