@@ -50,11 +50,7 @@ go func() {
   dataHandler := handler.NewDataHandler(dataUsecase)
 
 
-  r.POST("/data", da)
-
-
-
-
+  r.POST("/data", dataHandler.CreateData)
 
 
 }
