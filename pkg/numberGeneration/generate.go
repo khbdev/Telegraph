@@ -11,10 +11,10 @@ import (
 func AddRandomNumberPrefix(title string) string {
 	rand.Seed(time.Now().UnixNano())
 
-	// 1. lower case
+
 	slug := strings.ToLower(title)
 
-	// 2. bo‘sh joylarni "-" ga almashtirish
+
 	slug = strings.ReplaceAll(slug, " ", "-")
 
 
